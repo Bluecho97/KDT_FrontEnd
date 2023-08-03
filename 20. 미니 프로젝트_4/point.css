@@ -1,0 +1,149 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: 0;
+}
+
+main {
+	width: 100%;
+	height: 100vh;
+	background: #333;
+	display: flex;
+}
+
+header {
+	background: #333;
+}
+
+body header h1 {
+	font-size: 50px;
+	font-family: "arial";
+	color: #fff;
+	text-align: center;
+	opacity: 80%;
+}
+/*main section*/
+main section {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding-top: 35px;
+	z-index: 1;
+	/* border: 10px solid yellow; */
+}
+main section article {
+	position: relative;
+	flex: 1;
+	padding: 70px 40px 100px;
+	opacity: 0.6;
+	transition: flex 1s, opacity 1s;
+	z-index: 1;
+	cursor: pointer;
+}
+main section article::before {
+	content: "";
+	display: block;
+	width: 90%;
+	height: 95%;
+	background: #444;
+	position: absolute;
+	top: 0px;
+	left: -200px;
+	opacity: 0;
+	transition: 1s;
+}
+main section article .inner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	position: relative;
+}
+main section article .inner .txt {
+	width: 100%;
+	transition: 0.5s;
+}
+main section article .inner .txt h2 {
+	font: normal 2vw/1 "Alegreya Sans SC";
+	color: #fff;
+	margin-bottom: 40px;
+	padding-top: 70px;
+	transition: 1s;
+}
+main section article .inner .txt h2::after {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 2px;
+	background: #777;
+	margin-top: 20px;
+	transition: 1.5s;
+}
+main section article .inner .txt p {
+	font: 15px/1.5 "arial";
+	color: #999;
+	transition: 1.5s;
+	
+}
+/*figure*/
+main section article .inner figure {
+	width: 100%;
+	height: 15vh;
+	background: #777;
+	transform-origin: left center;
+	box-shadow: 5px 5px 30px rgba(0,0,0,0.3);
+	position: relative;
+	overflow: hidden;
+	filter: saturate(10%);
+	transition: 1.5s;
+}
+main section article .inner figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scale(1.1);
+}
+/*article 호버 효과 적용하기*/
+main section article:hover {
+	flex: 1.5;
+	opacity: 1;
+	z-index: 2;
+}
+main section article:hover::before {
+	left: 0px;
+	opacity: 1;
+}
+main section article:hover .inner .txt {
+	width: 90%;
+}
+main section article:hover .inner .txt p {
+	font-size: 120%;
+	padding-top: 0px;
+}
+main section article:hover .inner .txt h2 {
+	font-size: 7vw;
+	padding-top: 0px;
+}
+main section article:hover .inner .txt h2::after {
+	width: 140px;
+	background: orange;
+}
+main section article:hover .inner figure {
+	height: 25vh;
+	filter: saturate(120%);
+	transform: translateY(3vh);
+}

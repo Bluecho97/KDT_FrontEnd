@@ -1,0 +1,696 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Gowun+Batang&family=Gugi&family=Moirai+One&family=Monoton&family=Nanum+Gothic+Coding:wght@700&family=Nanum+Myeongjo:wght@700&family=Noto+Serif+KR&family=Sunflower:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap");
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+ul, ol, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* header */
+header {
+	width: 100%;
+	/* border-bottom: 1px solid #ddd; */
+    background: #000;
+}
+
+header .inner {
+	width: 1080px;
+	height: 120px;
+	margin: 0px auto;
+	position: relative;
+}
+
+header .inner h1 {
+	position: absolute;
+	left: 0px;
+	bottom: 15px;
+}
+
+header .inner h1 a {
+	font: bold 40px/1 "arial";
+	color: #ddd
+}
+
+header .inner .util {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+}
+
+header .inner .util li {
+	float: left;
+}
+
+header .inner .util li a {
+	display: block;
+	font: 12px/1 "arial";
+	color: #999;
+	padding: 0px 10px;
+}
+
+header .inner #gnb {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+header .inner #gnb li {
+	float: left;
+}
+
+header .inner #gnb li a {
+	display: block;
+	font: bold 15px/1 "arial";
+	color: #555;
+	padding: 20px 40px;
+	transition: all 0.5s
+}
+
+header .inner #gnb li a:hover {
+	background: #555;
+	color: #fff;
+}
+
+/* visual */
+header .main {
+	width: 100%;
+	height: calc(100vh - 120px);
+	/* background: #000; */
+	position: relative;
+	overflow: hidden;
+	padding-top: 150px;
+}
+
+header video {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+header .main {
+	width: 1180px;
+	margin: 0px auto;
+	position: relative;
+}
+
+header .main h1 {
+	font: normal 75px/1 'arial';
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+header .main p{
+	font: 40px/1.4 'arial';
+	color: #888;
+	margin-bottom: 60px;
+}
+
+header .main a {
+	display: block;
+	width: 400px;
+	height: 30px;
+	border: 2px solid #bbb;
+	font: bold 15px/30px 'arial';
+	color: #fff;
+	text-align: center;
+	letter-spacing: 5px;
+	transition: all 0.5s;
+}
+
+header .main a:hover {
+	background: #fff;
+	color: #555;
+}
+
+
+/* Recent News */
+/* figure {
+	width: 100%;
+	padding: 100px 0px;
+    background-color: #333;
+} */
+
+figure .inner {
+	width: 1180px;
+	margin: 0px auto;
+	width: 100%;
+	padding: 100px 0px;
+    background-color: #333;
+}
+
+figure .inner h1 {
+	font: bold 48px/1 'arial';
+	color: white;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+figure .inner .wrap {
+	width: 100%;
+	display: flex; /* Flexbox 레이아웃 설정 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center;
+}
+
+figure .inner .wrap::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+figure .inner .wrap article {
+	width: 280px;
+	float: left;
+	margin-right: 20px;
+}
+
+figure .inner .wrap article:last-child {
+	margin-right: 0px;
+}
+
+figure .inner .wrap article h2 {
+	margin-bottom: 10px;
+    color: white;
+}
+
+figure .inner .wrap article h2 a {
+	font: bold 16px/1 'arial';
+	color: white;
+}
+
+figure .inner .wrap article p a {
+	font: 14px/1.4 'arial';
+	color: #777;
+}
+
+figure .inner .wrap article .pic {
+	width: 100%;
+	height: 120px;
+	background: #333;
+	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden;
+}
+
+figure .inner .wrap article .pic img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Creators */
+section.creator {
+	width: 100%;
+	padding: 30px;
+	background-color: #333;
+	margin: 1px auto;
+	box-shadow: 10px 10px 30px #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+}
+
+section div.Creators {
+    font: bold 32px/1 'arial';
+	color: white;
+	text-align: center;
+	/* margin-bottom: 0px; */
+	/* margin-bottom: 50px; */
+}
+
+section div.team {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex: 1; /* Flex 요소를 동일한 비율로 확장하여 가로 정렬 */
+    padding: 10px; /* 내부 여백 설정 (원하는 값으로 조절 가능) */
+}
+
+section div.member {
+    flex: 0 0 calc(33.33% - 20px);
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+	background-color: #555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+/* member1 */
+section div.member1 {
+	background-color: #ebfaff;
+    flex: 1; /* Flex 요소를 동일한 비율로 확장하여 가로 정렬 */
+    padding: 10px; /* 내부 여백 설정 (원하는 값으로 조절 가능) */
+    border-radius: 10px;
+}
+section div.member1 section article.profile img {
+	box-shadow: 5px 15px 30px rgba(173, 216, 230, 0.8);
+}
+section div.member1 section a.btnView{
+	background: linear-gradient(45deg, #4affff, #35e0f7);
+	box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.493);
+}
+
+/* member2*/
+section div.member2 {
+	background-color: #edffeb;
+    flex: 1; /* Flex 요소를 동일한 비율로 확장하여 가로 정렬 */
+    padding: 10px; /* 내부 여백 설정 (원하는 값으로 조절 가능) */
+    border-radius: 10px;
+}
+section div.member2 section article.profile img {
+	box-shadow: 5px 15px 30px #bdccb783;
+}
+section div.member2 section a.btnView{
+	background: linear-gradient(45deg, #a0ff9d, #55f5b2);
+	box-shadow: 5px 10px 20px rgba(33, 250, 105, 0.3);
+}
+
+/* member3 */
+section div.member3 {
+	background-color: #fff3fd;
+    flex: 1; /* Flex 요소를 동일한 비율로 확장하여 가로 정렬 */
+    padding: 10px; /* 내부 여백 설정 (원하는 값으로 조절 가능) */
+    border-radius: 10px;
+}
+section div.member3 section article.profile img {
+	box-shadow: 5px 15px 30px rgba(252, 99, 214, 0.2);
+}
+section div.member3 section a.btnView{
+	background: linear-gradient(45deg, #ef74ff, #ff11c4);
+	box-shadow: 5px 10px 20px rgba(255, 17, 196, 0.357);
+}
+
+section nav.menu {
+	width: 100%;
+}
+
+section nav.menu::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+section nav.menu a {
+	font-size: 20px;
+	color: #667;
+}
+
+section nav.menu a:nth-of-type(1) {
+	float: left;
+}
+
+section nav.menu a:nth-of-type(2) {
+	float: right;
+}
+
+section article.profile {
+	width: 100%;
+	text-align: center;
+}
+
+section article.profile img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+	box-shadow: 5px 15px 30px rgba(173, 219, 230, 0.8)
+}
+
+section article.profile h1{
+	font-weight: bold;
+	font-size: 24px;
+	font-family: "arial";
+	line-height: 1;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+section article.profile h2{
+	font-weight: normal;
+	font-size: 16px;
+	font-family: "arial";
+	color: #bbb;
+	margin-bottom: 30px;
+}
+
+section a.btnView {
+	display: block;
+	width: 180px;
+	height: 32px;
+	margin: 0px auto 20px;
+	background-color: #445;
+	border-radius: 16px;
+	font-weight: bold;
+	font-size: 10px;
+	font-family: "arial";
+	color: #fff;
+	line-height: 32px;
+	text-align: center;
+	/*background: linear-gradient(45deg, #4affff, #35e0f7)
+	box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.493)*/
+}
+
+section ul.contact {
+	margin-bottom: 25px;
+}
+
+section ul.contact li {
+	width: 100%;
+	padding: 10px 0px;
+	border-bottom: 1px solid #eee;
+}
+
+section ul.contact li:last-child {
+	border-bottom: none;
+}
+
+section ul.contact li i {
+	width: 20%;
+	text-align: center;
+	color: #555;
+	font-size: 15px;
+	text-shadow: 2px 2px 2px #ddd;
+}
+
+section ul.contact li span {
+	font-weight: normal;
+	font-size: 11px;
+	font-family: 'orbitron';
+	color: #555;
+	letter-spacing: 1px;
+}
+
+section nav.others {
+	width: 100%;
+	text-align: center;
+}
+
+section nav.others a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin: 0px 10px;
+	opacity: 0.4;
+	filter: saturate(0.7);
+}
+
+section nav.others a.on {
+	opacity: 1;
+	filter: saturate(1);
+}
+
+section nav.others a:nth-of-type(1) {
+	background-color: #35e0f7;
+	box-shadow: 5px 5px 10px rgba(74, 255, 255, 0.7);
+}
+
+section nav.others a:nth-of-type(2) {
+	background-color: #55f5cd;
+	box-shadow: 5px 5px 10px rgba(85, 247, 178, 0.7);
+}
+
+section nav.others a:nth-of-type(3) {
+	background-color: #ff80df;
+	box-shadow: 5px 5px 10px rgba(255, 128, 223, 0.7);
+}
+
+section nav.others a:nth-of-type(4) {
+	background-color: #a794fd;
+	box-shadow: 5px 5px 10px rgba(167, 148, 253, 0.7);
+}
+
+
+/* Solutions */
+main {
+	width: 100%;
+	height: 80%;
+	background: #333;
+    /* padding: 10vh; */
+	/* display: flex; */
+    
+}
+
+main div.solutions {
+    font: bold 24px/1 'arial';
+	color: white;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+
+main nav {
+	position: absolute;
+	top: 10vh;
+	right: 5vw;
+	z-index: 3; /*section요소와 aside팝업요소보다 위에 배치하기위해 3 지정*/ 
+}
+main nav ul {
+	display: flex; /*자식 li요소를 좌우 배치되도록 설정*/
+}
+main nav ul li a {
+	font-size: 18px;
+	color: #bbb;
+	margin-right: 30px;
+}
+
+main section {
+	width: 100%;
+	height: 100%;
+	padding-top: 5vh;
+	display: flex;
+	position: relative;
+	z-index: 1; /*aside팝업요소보다 아래 배치하기위해 1 지정*/ 
+}
+main section article {
+	flex: 1; /*모든 article 요소의 너비를 동등하게 적용*/
+	padding: 70px 40px 100px;
+	position: relative;
+	opacity: 0.6;
+	z-index: 1;
+	transition: opacity 1s, flex 1s;
+	cursor: pointer;
+}
+main section article::before {
+	content: "";
+	display: block;
+	width: 80%;
+	height: 95%;
+	position: absolute;
+	background: #444;
+	top: 0px;
+	left: -200px; /*마우스 호버 전 article의 왼쪽 바깥쪽에 배치*/
+	opacity: 0; /*마우스 호버 전 투명하게 숨김 처리*/ 
+	transition: 1s;
+}
+main section article .inner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between; /*.txt와 figure 요소를 위 아래 끝에 배치*/
+	position: relative; /*::bofore 요소 위쪽으로 배치되게 하기 위해 position 처리 */
+}
+main section article .inner .txt {
+	width: 100%;
+	transition: 0.5s; /*호버시 전환효과 처리 */
+}
+main section article .inner .txt h2 {
+	font: normal 2vw/1 "Alegreya Sans SC";
+	color: #fff;
+	margin-bottom: 40px;
+	padding-top: 70px;
+	transition: 1s; /*호버시 전환효과 처리 */
+}
+main section article .inner .txt h2::after { /*h2요소 하단 꾸밈 효과*/
+	content: "";
+	display: block;
+	width: 40px;
+	height: 2px;
+	background: #777;
+	margin-top: 20px;
+	transition: 1.5s;
+}
+main section article .inner .txt p {
+	font: 14px/1.4 "arial";
+	color: #999;
+}
+
+main section article .inner .txt p a {
+	font: bold 14px/1.4 "arial";
+	color: orange;
+}
+
+main section article .inner figure {
+	width: 100%;
+	height: 15vh;
+	background: #777;
+	overflow: hidden;
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+	filter: saturate(10%); /*영상박스의 채도를 낮춤*/
+	transform-origin: left center; /*왼쪽 방향 기준으로 변형이 일어나도록 중심축 변경*/
+	transition: 1s;
+}
+main section article .inner figure video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /*영상이 figure 영역안에 꽉 차도록 설정*/
+	transform: scale(1.1); /*영상 가장자리의 여백을 숨기기위해 약간 확대*/
+}
+
+main section article:hover { /*article 요소에 호버시 변경 구문*/
+	flex: 1.5; /*호버 된 요소만 1.5배 너비를 증가*/
+	opacity: 1;
+	z-index: 2;
+}
+main section article:hover::before { /*article 요소에 호버시 ::before 변경 구문*/
+	left: 0px;
+	opacity: 1;
+}
+main section article:hover .inner .txt {
+	width: 75%;
+}
+main section article:hover .inner .txt h2 {
+	font-size: 3vw;
+	padding-top: 0px;
+}
+main section article:hover .inner .txt h2::after {
+	width: 120px;
+	background: orange;
+}
+main section article:hover .inner figure {
+	height: 25vh;
+	filter: saturate(120%);
+	transform: translateY(3vh);
+}
+
+
+main aside {
+	width: 100%;
+	height: 100vh;
+	background: #222;
+	position: fixed;
+	top: 0px;
+	left: -100%; /*왼쪽 화면 바깥에 배치*/
+	opacity: 0; /*투명도 0으로 비활성화*/
+	z-index: 2; /*2로 설정하며 section은 덮고 h1과 nav는 aside 위쪽에 배치*/
+	padding: 20vh 7vw 14vh 20vw;
+	display: flex; 
+	justify-content: space-between; /*자식 요소인 .txt와 figure를 좌우 양 끝에 배치 */
+	transition: 1s; /*전환효과 설정*/
+}
+main aside.on { /*클래스 on이 붙으면*/
+	opacity: 1;
+	left: 0%; /*왼쪽 바깥에서 화면 안쪽으로 이동하도록 설정*/
+}
+main aside .txt {
+	width: 25%;
+	height: 100%;
+}
+main aside .txt h1 {
+	font: normal 36px/1 "Alegreya Sans SC";
+	color: #ddd;
+	margin-bottom: 20px;
+}
+main aside .txt p {
+	font: 1.1vw/1.3 "arial";
+	color: #666;
+	margin-bottom: 60px;
+}
+main aside .txt span {
+	cursor: pointer;
+	color: orange;
+}
+main aside figure {
+	width: 72%;
+	height: 100%;
+}
+main aside figure video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/* footer */
+footer {
+	width: 100%;
+    height: 100%;
+	background: #333;
+	padding: 100px 0px;
+	border-top: 1px solid #888;
+}
+
+footer .inner {
+	width: 1180px;
+	margin: 0px auto;
+}
+
+footer .inner .upper {
+	width: 100%;
+	border-bottom: 1px solid #777;
+	padding-bottom: 20px;
+}
+
+footer .inner .upper::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+footer .inner .upper h1 a {
+	float: left;
+	font: bold 24px/1 "arial";
+	color: #666;
+}
+
+footer .inner .upper ul {
+	float: right;
+}
+
+footer .inner .upper ul li {
+	float: left;
+	margin-left: 20px;
+}
+
+footer .inner .upper ul li a {
+	font: bold 14px/1 "arial";
+	color: #666;
+}
+
+footer .inner .lower {
+	width: 100%;
+	padding-top: 20px;
+}
+
+footer .inner .lower address {
+	width: 100%;
+	font: 12px/1.3 "arial";
+	color: #777;
+	margin-bottom: 20px;
+}
+
+footer .inner .lower p {
+	width: 100%;
+	font: 12px/1 "arial";
+	color: #777;
+}
